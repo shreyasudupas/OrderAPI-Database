@@ -1,0 +1,13 @@
+﻿/*
+INCLUDE MASTER TABLE FOR CITIES
+*/
+
+SET IDENTITY_INSERT [DBO].[TBLCITY] ON 
+GO
+
+IF NOT EXISTS (SELECT [CITYID] FROM [DBO].[TBLCITY] WHERE [CITYID] = 1)
+	INSERT INTO [dbo].[tblCity]([CityId],[CityNames],[StateId],[CreatedDate],[UpdateDate]) values (1,'Bangalore',1,GETDATE(),NULL)
+	GO
+
+SET IDENTITY_INSERT [dbo].[tblCity] OFF
+GO

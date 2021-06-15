@@ -60,6 +60,9 @@
     <Folder Include="Properties" />
     <Folder Include="dbo\" />
     <Folder Include="dbo\Tables\" />
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Pre-Build" />
+    <Folder Include="Scripts\Post-Build" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\__EFMigrationsHistory.sql" />
@@ -71,5 +74,15 @@
     <Build Include="dbo\Tables\tblLog.sql" />
     <Build Include="dbo\Tables\tblPaymentType.sql" />
     <Build Include="dbo\Tables\tblUserOrder.sql" />
+    <Build Include="dbo\Tables\tblState.sql" />
+    <Build Include="dbo\Tables\tblPaymentMode.sql" />
+    <Build Include="dbo\Tables\tblCity.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Post-Build\Script.PostDeployment1.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Post-Build\tblCities.sql" />
+    <None Include="Scripts\Post-Build\tblState.sql" />
   </ItemGroup>
 </Project>
